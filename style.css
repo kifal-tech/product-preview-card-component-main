@@ -1,0 +1,138 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: hsl(30, 38%, 92%);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+.m-top{
+  margin-top: 1.5rem;
+}
+.container{
+  width: 500px;
+  
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+.text{
+  background: white;
+  width: 50%;
+  padding: 1.5rem;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.image{
+  width: 50%;
+}
+.image .img{
+  width: 250px;
+  height: 100%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  background: url(./images/image-product-desktop.jpg) no-repeat center center/cover;
+}
+.content .text .perfume{
+  color: hsl(228, 12%, 48%);
+  font-family: Montserrat, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.2rem;
+}
+.content .text h1{
+  color: hsl(212, 21%, 14%);
+  width: 200px;
+  line-height: 0.9;
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+}
+.content .text .about{
+  color: hsl(228, 12%, 48%);
+  font-size: smaller;
+  
+}
+.content .text .price{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: center;
+}
+
+.content .text .price .discount_price{
+  font-size: 1.5rem;
+  color: hsl(158, 36%, 37%);
+  font-family: 'Fraunces', serif;
+}
+
+.content .text .price .old_price{
+  text-decoration: line-through;
+  font-size: 0.8rem;
+  color: hsl(228, 12%, 48%);
+  padding-left: 1rem;
+}
+
+.content .text button {
+  background: hsl(158, 36%, 37%);
+  padding: 0.7rem;
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  
+}
+.content .text button:hover{
+  background: hsl(158, 41%, 22%);
+  cursor: pointer;
+}
+@media (max-width:500px) {
+  
+.image .img {
+  background: url(./images/image-product-mobile.jpg) no-repeat center center/cover;
+  min-height:280px;
+  width: unset;
+  border-bottom-left-radius: unset;
+  border-top-right-radius: 10px;
+ }
+
+ .text{
+  border-bottom-left-radius: 10px;
+    border-top-right-radius: unset;
+ }
+  .content {
+    flex-direction: column;
+  }
+  .container{
+    max-width: 80vw;
+  }
+
+  .image,
+  .text {
+    width: 100%;
+  }
+
+  .content .text h1{
+    width:280px;
+  }
+
+  .m-top {
+    margin-top: 1rem;
+  }
+}
